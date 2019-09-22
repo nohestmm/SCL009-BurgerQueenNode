@@ -12,7 +12,16 @@ const app = express();
 
 
 // Conectar aplicación a MongoDB
-mongoose.connect(mongoUrl, { useNewUrlParser: true });
+mongoose.connect(mongoUrl, {
+  useUnifiedTopology: true,
+  useNewUrlParser: true,
+  useCreateIndex: true
+  })
+  // .then(() => console.log('DB Connected!'))
+  // .catch(err => {
+  // console.log("error " + err.message);
+  // });
+
 
 
 app.set('config', config);
