@@ -4,7 +4,7 @@ const users = require('./users');
 
 const root = (app, next) => {
   const pkg = app.get('pkg');
-  app.get('/', (req, res) => res.end("hola mundo"));
+  app.get('/', (req, res) => res.send("hola mundo"));
   app.all('*', (req, resp, next) => next(404));
   return next();
 };

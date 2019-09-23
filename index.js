@@ -6,7 +6,6 @@ const errorHandler = require('./middleware/error');
 const routes = require('./routes');
 const pkg = require('./package.json');
 
-
 const { port, mongoUrl, secret } = config;
 const app = express();
 
@@ -18,9 +17,6 @@ mongoose.connect(mongoUrl, {
   useCreateIndex: true
   })
   // .then(() => console.log('DB Connected!'))
-  // .catch(err => {
-  // console.log("error " + err.message);
-  // });
 
 
 

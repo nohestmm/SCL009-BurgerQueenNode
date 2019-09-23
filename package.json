@@ -8,7 +8,7 @@
     "test": "jest --verbose --testPathIgnorePatterns e2e",
     "start": "node index.js",
     "e2e": "jest --verbose --testPathPattern e2e --globalSetup ./e2e/globalSetup --globalTeardown ./e2e/globalTeardown --runInBand",
-    "deploy": "now -e MONGO_URL=@mongo-url -e JWT_SECRET=@jwt-secret -e ADMIN_EMAIL=@admin-email -e ADMIN_PASSWORD=@admin-password"
+    "deploy": "now -e MONGO_URL=@mongo_url -e JWT_SECRET=@jwt-secret -e ADMIN_EMAIL=@admin-email -e ADMIN_PASSWORD=@admin-password"
   },
   "dependencies": {
     "@zeit/ncc": "^0.20.5",
@@ -21,6 +21,7 @@
     "tree-kill": "^1.2.1"
   },
   "devDependencies": {
+    "@now/node": "^1.0.0",
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.17.2",
