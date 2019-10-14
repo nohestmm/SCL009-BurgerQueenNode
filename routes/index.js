@@ -4,7 +4,7 @@ const url = require('../config')
 
 const root = (app, next) => {
   const pkg = app.get('pkg');
-  app.get('/', (req, res) => res.send(`hola mundo era now y despues npm run deploy`));
+  app.get('/', (req, res) => res.send(`hola mundo oytra vez`));
   app.all('*', (req, resp, next) => next(404));
   return next();
 };
